@@ -3,10 +3,17 @@
  */
 
 export interface OneMinResponse {
-  aiRecord: {
+  requestId?: string;
+  content?: string;
+  aiRecord?: {
     aiRecordDetail: {
       resultObject: string[];
     };
+  };
+  usage?: {
+    prompt_tokens: number;
+    completion_tokens: number;
+    total_tokens: number;
   };
 }
 
@@ -22,10 +29,11 @@ export interface OneMinImageResponse {
 export interface RateLimitRecord {
   timestamps: number[];
   tokenCount: number;
+  windowStart?: number;
 }
 
 export interface RateLimitConfig {
-  windowMs: number;     // Time window (milliseconds)
-  maxRequests: number;  // Maximum requests
-  maxTokens?: number;   // Maximum tokens (optional)
+  windowMs: number; // Time window (milliseconds)
+  maxRequests: number; // Maximum requests
+  maxTokens?: number; // Maximum tokens (optional)
 }

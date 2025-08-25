@@ -6,7 +6,7 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "1min-relay",
 	"main": "src/index.ts",
-	"compatibility_date": "2025-06-17",
+	"compatibility_date": "2025-07-25",
 	"observability": {
 		"enabled": true
 	},
@@ -44,7 +44,7 @@
 	"kv_namespaces": [
 		{
 		  "binding": "RATE_LIMIT_STORE",
-		  "id": "b06745ff76f840a6a4d9ce7db128ab77" // IMPORTANT: Change this to your KV namespace ID
+		  "id": "[your-kv-namespace-id]" // IMPORTANT: Change this to your KV namespace ID
 		}
 	  ],
 
